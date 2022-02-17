@@ -34,6 +34,10 @@ mensaje_commit="Subir Local 1"
 # u: cetec-bchavez
 # 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
 
+#---- cetec-bchavez, Git02 - Local ----
+# u: cetec-bchavez
+# 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
+
 #---------- KEYS PARA SSH --------------
 # Detalle en get_clone_repository_ssh
 
