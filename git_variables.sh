@@ -25,7 +25,7 @@ carpeta_eliminar="practica_01"
 comentario="Confirmar Local 1"
 
 #"-----------5. REMOTO-------------"
-rama="funcionalidad1" # "funcionalidad1" "main"
+rama="main" # "funcionalidad1" "main"
 
 #"-----------6. RAMA-------------"
 
@@ -41,7 +41,7 @@ get_menu_opciones() {
     echo -e "\t\t1. Inicio Repositorio"
     echo -e "\t\t2. Configuracion Repositorio"
     echo -e "\t\t3. Archivos Agregar/Eliminar"
-    echo -e "\t\t4. Confirmar Cambios Archivos"
+    echo -e "\t\t4. Add/Confirmar Cambios Archivos"
     echo -e "\t\t5. Acciones Remoto Web"    
     echo -e "\t\t6. Ramas Repositorio"
     echo -e "\t\t7. Proceso Resumen Diario"
@@ -255,12 +255,15 @@ get_rama() {
         0)  
             ;;        
         1)
+            read -p "Ingrese el Nombre de Rama: " rama
             git branch $rama 
             echo -e "Rama/Branch Created..." ;;            
         2)
+            read -p "Ingrese el Nombre de Rama: " rama
             git checkout $rama
             echo -e "Rama/Branch Selected..." ;;
         3)
+            read -p "Ingrese el Nombre de Rama: " rama
             git merge $rama
             echo -e "Rama/Branch Merged..." ;;
         #4)
@@ -268,9 +271,11 @@ get_rama() {
         #    git push -u origin $rama ;;
 
         4)
+            read -p "Ingrese el Nombre de Rama: " rama
             git branch -d $rama
             echo -e "Rama/Branch Deleted Local..." ;;
         5)
+            read -p "Ingrese el Nombre de Rama: " rama
             git push origin --delete $rama
             echo -e "Rama/Branch Deleted Remote..." ;;
         *)  
